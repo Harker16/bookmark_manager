@@ -1,10 +1,12 @@
+ENV["RACK_ENV"] ||= "development"
+
 require 'sinatra/base'
 require './models/link'
 
 class Bookmarks < Sinatra::Base
 
   get '/' do
-    'HELLO YOU'
+    redirect '/links'
   end
 
   get '/links' do
